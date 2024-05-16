@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+            width: 100%;
+            background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-image: url('assets/about_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        .bio {
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .bio.show {
+            opacity: 1;
+        }
+        .skill-card {
+            margin-bottom: 20px;
+        }
+        .menu-toggle {
+            cursor: pointer;
+            text-align: right;
+        }
+
+        .menu-content {
+            display: none;
+            transition: all 0.3s ease-in-out;
+            text-align: right;
+        }
+
+        .menu-content.show {
+            display: flex;
+            justify-content: center;
+            padding: 0px 10px;
+            color: black;
+        }
+
+        .menu-content a {
+            display: block;
+            margin-bottom: 5px;
+            padding: 0px 10px;
+            color: black;
+            font-size: 30px;
+
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="menu-toggle text-left mt-3">
+        <button class="btn btn-dark" onclick="toggleMenu()">Menu</button>
+    </div>
+    <div class="menu-content text-center mt-3 ">
+        <a href="index.html" class="text-decoration-none">Home</a>
+        <a href="about_me.html" class="text-decoration-none">About Me</a>
+        <a href="projects.html" class="text-decoration-none">Projects</a>
+        <a href="skills.html" class="text-decoration-none">Skills</a>
+        <a href="contact.html" class="text-decoration-none">Contact Me</a>
+    </div>
+    
+    <div class="container text-center">
+        <h1 class="mb-4">About Me</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <img src="assets/profile.jpg" alt="Profile Picture" class="profile-image">
+                <h2 class="mt-3">Jisna George</h2>
+                <p class="text-muted">Associate Software Engineer Trainee</p>
+                <div class="bio">
+                    <p>As an Associate Software Developer Trainee, I am embarking on an exciting journey into the realm of
+                        software development. With a passion for technology and a drive to innovate, I am eager to dive deep
+                        into the world of coding and software engineering. In this role, I am honing my skills under the
+                        guidance of seasoned professionals, gaining hands-on experience in various aspects of software
+                        development.</p>
+                    <p>With a keen eye for detail and a thirst
+                        for knowledge, I am committed to mastering the tools and technologies that power modern software
+                        solutions. As I continue to expand my expertise, I am poised to make meaningful contributions to the
+                        field and embark on a rewarding career in software development.</p>
+                </div>
+                
+                <div class="text-center">
+                    <a href="C:\Users\jisna.george\Documents\Jisna Resume.pdf" class="btn btn-primary ">View Resume</a>
+                </div>
+                
+            
+            
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add a class to the biography section to trigger the fade-in animation
+            document.querySelector(".bio").classList.add("show");
+        });
+    </script>
+    <script>
+        function toggleMenu() {
+            var menuContent = document.querySelector('.menu-content');
+            menuContent.classList.toggle('show');
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('assets/bg2.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.info {
+    position: absolute;
+    top: 50%;
+    left: 10%; 
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 1;
+    text-align: right;
+     
+}
+.info h1 {
+    font-size: 4rem; 
+}
+.info p {
+    font-size: 2rem; 
+}
+.info h1,
+.info p {
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    display: flex;
+    top:5%;
+    justify-content: center;
+    height: 40%;
+}
+.computer {
+    position: relative;
+    top:90%;
+    left:235px;
+    width: 40%;
+    background-color: #000; 
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.screen {
+    display: block;
+    height: 40vh; 
+    padding: 20px;
+    width: 100%;
+
+    overflow: auto;
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    transition: background-color 0.3s ease;
+}
+.menu a:hover {
+    background-color: #f0f0f0;
+}
+.start {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.start img {
+    width: 30px; 
+}
+.active {
+    display: block;
+}
+
+.social-icons {
+    position: absolute;
+    top: 80%;
+    bottom: 10px; 
+    left: 10px; 
+    z-index: 1000; 
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px; 
+    font-size: 24px; 
+    color: #fff; 
+}
+
+
+.power-on-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; 
+    font-size: 16px;
+}

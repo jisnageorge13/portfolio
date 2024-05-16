@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('assets/bg2.png'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .computer {
+            position: relative;
+            top:9%;
+            left:18px;
+            width: 23%;
+            background-color: #000; /* Set computer screen color to black */
+            max-width: 420px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .screen {
+            height: 21vh; /* Adjust height as needed */
+            padding: 20px;
+            overflow: auto;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .start {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .start img {
+            width: 30px; /* Adjust size as needed */
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="computer">
+
+            <div class="start" onclick="toggleMenu()">
+                <img src="assets/power-on.png" alt="Start">
+            </div>
+            <div class="menu" id="menu">
+                <a href="#" onclick="showContent('home')">Home</a>
+                <a href="#" onclick="showContent('about')">About Me</a>
+                <a href="#" onclick="showContent('projects')">Projects</a>
+            </div>
+            <div class="screen" id="screen">
+                <!-- <h2>Welcome to My Portfolio!</h2>
+                <p>Please click the start button to begin.</p> -->
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+ 
+        function showContent(section) {
+            var screen = document.getElementById("screen");
+            switch (section) {
+                case 'home':
+                    screen.innerHTML = `
+                        <h2>Welcome to My Portfolio!</h2>
+                        <p>Please click the start button to begin.</p>
+                    `;
+                    break;
+                case 'about':
+                    screen.innerHTML = `
+                        <h2>About Me</h2>
+                        <p>Your about me details go here...</p>
+                    `;
+                    break;
+                case 'projects':
+                    screen.innerHTML = `
+                        <h2>Projects</h2>
+                        <p>Your project details go here...</p>
+                    `;
+                    break;
+                default:
+                    screen.innerHTML = `
+                        <h2>Welcome to My Portfolio!</h2>
+                        <p>Please click the start button to begin.</p>
+                    `;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
